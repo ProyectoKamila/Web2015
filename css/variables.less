@@ -1,0 +1,68 @@
+@screen-sm-max:768px;
+@screen-md-max:996px;
+
+@screen-lg-min: 1200px;
+/*Colores */
+
+@rojo: #9e0001;
+@rojo-claro: #9e0001;
+@rojo-oscuro: #a60a0b;
+@gris:#3a3a3a;
+@azul:#174447;
+@azul-oscuro:#192c3b;
+@gris-claro:#808a89;
+@fondo-planes:#f0f0f0;
+/* MIXIN */
+.color-rojo{
+	color: @rojo;
+}
+.color-rojo-claro{
+	color: @rojo-claro;
+}
+.color-rojo-oscuro{
+	color: @rojo-oscuro;
+}
+h1{
+			font-size: 32px;
+			color: white;
+			font-weight: 200;
+			strong{
+				color: @rojo;
+				font-weight: 400;
+			}
+}
+h2{
+			font-size: 24px;
+			color: white;
+			font-weight: 200;
+			strong{
+				color: @rojo;
+				font-weight: 400;
+			}
+}
+h3{
+font-size: 20px;
+font-weight: 200;
+color: white;
+}
+h4{
+font-size: 18px;
+font-weight: 200;
+color: white;	
+}
+p{
+	line-height: 1.5;
+	font-size: 1.1em;
+	color: @gris-claro;
+}
+.btn-default{
+	background: @rojo-oscuro;
+	color: white;
+	border:none;
+	transition:0.3s all ease-in-out;
+}
+.btn-default:hover{
+	background:@rojo-claro;
+	border:none;
+	color: white;
+}

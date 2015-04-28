@@ -1,0 +1,295 @@
+<?php get_header(''); ?>
+
+<div class="container-fluid cover"  id="portada1" data-type="parallax" data-speed="20" >
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 portada" >
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 logo">
+                            <img src="<?php bloginfo('template_url');?>/images/general/pk.png" alt="Proyecto Kamila Agencia Web" class="">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs menu">
+                          <ul class="nav nav-pills">
+                             <li role="presentation" ><a href="<?php echo home_url('conocenos');?>">Conócenos</a></li>
+                             <li role="presentation"><a href="#">Productos y Servicios</a></li>
+                             <li role="presentation"><a href="#">Portafolio</a></li>
+                             <li role="presentation"><a href="#">Blog</a></li>
+                             <li role="presentation"><a href="#">Contacto</a></li>
+                        </ul>  
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 titulo">
+                            <h1>&iexcl;HOLA&excl; SOMOS <strong>PROYECTO KAMILA</strong></h1>
+                            <h2 class="hidden-xs"><strong>Dise&ntilde;amos y desarrollamos</strong> aplicaciones web Impresionantes</h2>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 contenido">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <a class="btn btn-default"> Planes de Servicio</a>
+                            <nav>
+                                <ul class="pager">
+                                    <li><a href="#"><</a></li>
+                                    <li><a href="#">></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <article id="servicios" data-type="parallax" data-speed="210">
+        <div class="container">
+            <div class="row">
+                <?php $s = query_posts(array('post_type' => 'servicios','posts_per_page'=>6 ));?>
+                <?php if(!empty($s)) {?>
+                    <?php while(have_posts()) {?>
+                    <?php the_post(); ?>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="container-fluid">
+                    <div class="row">
+                        <?php $icon = get_field('icono_de_servicio');?>
+                        <?php if(!empty($icon)){?>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 middle-line">
+                            <div class="circle"><img src="<?php echo $icon; ?>" class="icono_servicio" alt="<?php the_title(); ?>"/></div>
+                        </div>
+                        <?php }?>
+                    </div>
+                    </div>
+                    <a href="<?php the_permalink(); ?>"><h3 class="services-title"><?php the_title(); ?></h3></a>
+                    <div class="services-excerpt">
+                        <p><?php echo max_charlength(get_the_content(), 320);?></p>
+                    </div>
+                </div>
+                    <?php } ?>
+                <?php } ?>
+            </div>
+        </div>
+        </article>
+        <article id="planes" data-type="parallax" data-speed="210">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
+                        <h1><strong>PLANES</strong></h1>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 subtitle">
+                        <p>Tenemos un plan que se ajusta a ti</p>
+                    </div>
+                    <?php for($i=0; $i<3; $i++) {?>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 plan">
+                        <header>
+                            <h2>PLAN ORO</h2>
+                            <h3>Medianas Empresas</h3>
+                            <span> Nuevo</span>
+                        </header>
+                        <section class="price">
+                            <p>12.923 Bs</p>
+                        </section>
+                        <section class="caracteristicas">
+                        <ul>
+                            <li><p><strong>100</strong> Clic en publicidad</p></li>
+                            <li><p><strong>2 a 6</strong> Cuotas</p></li>
+                            <li><p><strong>2 GB</strong> Hosting</p></li>
+                            <li><p><strong>1 año</strong> Dominio</p></li>
+                        </ul>
+                        <a class="btn btn-default">Adquirir Ahora</a>
+                        </section>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </article>
+        <article id="portafolio">
+            <div class="fondo" data-type="parallax" data-speed="210">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
+                        <h1><strong>PORTAFOLIO</strong></h1>
+                        <img src="<?php bloginfo('template_url');?>/images/general/liston-home.png" alt="Separador" class="img-responsive">
+                        <h2>Experiencia respaldada en nuestros clientes</h2>
+                        <h1> Todo es <strong>&iexcl;WEB!</strong></h1>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+                <?php $p = query_posts(array('post_type'=>'portafolio','posts_per_page'=>6,'orderby'=>'rand'));?>
+                <?php if(!empty($p)){?>
+            <div class="container-fluid content-item">
+                <div class="row">
+                
+                    <?php while(have_posts()) { ?>
+                        <?php the_post();?>
+ 
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 item">
+                        <div class="title-folio">
+                          <h4><?php the_title(); ?></h4>
+                        </div>
+                        <?php $image_url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );?>
+
+                        <div class="folio">
+                            <div class="image" style="background-image: url(<?php echo $image_url; ?>) ;"></div>
+                            <div class="cover-image"></div>
+                        </div>
+                    </div>
+                <?php } ?>
+                </div>
+            </div>
+            <?php } ?>
+        </article>
+        <article class="marketing-interno">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h1><strong>No se puede detener el tiempo</strong></h1>
+                        <h3>Dise&ntilde;o limpio, moderno y minimalista. Proyecto Kamila es un nuevo camino a seguir</h3>
+                        <img src="<?php bloginfo('template_url');?>/images/general/compu.png" alt="">
+                    </div>
+                </div>
+            </div>
+        
+        <div class="kamila-messenger">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-2 content-sms">
+                        <img src="<?php bloginfo('template_url');?>/images/general/tecnologia.png" alt="">
+                        <img src="<?php bloginfo('template_url');?>/images/general/liston-home.png" alt="Separador" class="img-responsive">
+                        <p> En la tecnologia no hay dimensiones limitadas <br>
+                            La Creatividad es la base de tus sue&ntilde;os</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </article>
+        <?php if(!$_SESSION['PantallaAncho'] < 768){  ?> 
+        <section class="blog">
+            <h1><strong>DESDE EL BLOG</strong></h1>
+            <div class="container">
+                <div class="row">
+                           <?php // Get RSS Feed(s)
+
+include_once( ABSPATH . WPINC . '/feed.php' );
+
+// Get a SimplePie feed object from the specified feed source.
+$rss = fetch_feed( 'http://proyectokamila.com/blog/feed' );
+
+$maxitems = 3;
+
+if ( ! is_wp_error( $rss ) ) : // Checks that the object is created correctly
+
+    // Figure out how many total items there are, but limit it to 5. 
+    $maxitems = $rss->get_item_quantity( 3 ); 
+
+    // Build an array of all the items, starting with element 0 (first element).
+    $rss_items = $rss->get_items( 0, $maxitems );
+
+endif;
+$i=0;
+?>
+    <?php if ( $maxitems == 0 ) : ?>
+        
+    <?php else : ?>
+        <?php // Loop through each feed item and display each item as a hyperlink. ?>
+        <?php foreach ( $rss_items as $item ) : ?>
+
+                   <?php 
+
+                   ?> 
+            <div class="col-lg-4 col-md-4 col-sm 4 col-xs-12">
+                <div class="noticia-blog">
+                   <a href="<?php echo esc_url( $item->get_permalink() ); ?>"
+                    title="<?php printf( __( 'Publicado %s', 'my-text-domain' ), $item->get_date('j F Y | g:i a') ); ?>"><img src="<?php echo $item->feed->data['child']['']['rss'][0]['child']['']['channel'][0]['child']['']['item'][$i]['child']['']['image'][0]['data']; ?>" alt="$item->get_title()" class="img-blog">
+                </a>
+              
+                <a href="<?php echo esc_url( $item->get_permalink() ); ?>"
+                    title="<?php printf( __( 'Posted %s', 'my-text-domain' ), $item->get_date('j F Y | g:i a') ); ?>">
+                    <h2><?php echo esc_html( $item->get_title() ); ?></h2>
+                </a>
+                <p>
+                    <?php echo esc_html( $item->get_content() ); ?>
+                </p>
+                <div class="dates">
+                    <span>
+                        <img src="<?php bloginfo('template_url');?>/images/home/usuario.png" alt="usuario icon">
+                     <?php echo $item->feed->data['child']['']['rss'][0]['child']['']['channel'][0]['child']['']['item'][$i]['child']['http://purl.org/dc/elements/1.1/']['creator'][0]['data']; $i++;?>
+                 </span>
+                  <span>
+                        <img src="<?php bloginfo('template_url');?>/images/home/calendario.png" alt="usuario icon">
+                     <?php echo $item->get_date('j F Y'); ?>
+                 </span>
+                   <span>
+                        <img src="<?php bloginfo('template_url');?>/images/home/comentario.png" alt="usuario icon">
+                     <a href="<?php echo esc_url( $item->get_permalink() ); ?>" class="rojo"> Leer mas</a>
+                 </span>
+                </div>
+                </div>
+            </div>
+            <?php ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+<?php } ?>
+            </div>
+  
+        </section>
+        <article class="contactanos">
+            <div class="container">
+                <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
+                        <h1><strong>CONT&Aacute;CTANOS</strong></h1>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 subtitle">
+                        <p>!Que la duda no te detenga&iexcl;</p>
+                        <p>Escribenos  que con gusto te responderemos</p>
+                    </div>
+                    <div class="div-col-md-12 div-col-sm-12 div-col-xs-12 col-lg-12 main">
+                        <div class="mapa" id="map-canvas"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cover-map">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 contact-form">
+                                    <form action="">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <input class="text margin-top" type="text" name="nombre" placeholder="Nombre" required>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <input class="text margin-top" type="text" name="apellido" placeholder="Apellido">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <input class="text" type="text" name="telefono" placeholder="Telefono" required>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <input class="text" type="email" name="email" placeholder="Email" required>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <textarea class="text"name="mensaje" id="" placeholder="Mensaje"></textarea>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm5 col-xs-6">
+                                            <input type="submit" class="form-enviar" value="Enviar Mensaje" name="send-contact-form">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 contact-dates">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><img src="<?php bloginfo('template_url');?>/images/home/casa.png" alt=""></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> Ubicaci&oacute;n</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p> Avenidad Romulo Gallegos con Calle C conjunto residencial Los Almendros Mezzanina oficina 6 Los Dos Caminos - Venezuela</p></div>
+                                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><img src="<?php bloginfo('template_url');?>/images/home/celu.png" alt=""></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> Tel&eacute;fono</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p>0212-432-10-39</p></div>
+                                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><img src="<?php bloginfo('template_url');?>/images/home/horario.png" alt=""></div>
+                                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> Horario</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p> Luner a viernes <br> 8:30am a 5:30pm</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+<?php get_footer(''); ?>
