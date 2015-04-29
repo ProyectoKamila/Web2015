@@ -30,7 +30,7 @@
                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
                         <ul class="nav nav-pills">
                              <li role="presentation" ><a href="<?php echo home_url('conocenos');?>">Conócenos</a></li>
-                             <li role="presentation"><a href="#">Productos y Servicios</a></li>
+                             <li role="presentation"><a href="<?php echo home_url('servicios');?>">Productos y Servicios</a></li>
                              <li role="presentation"><a href="#">Portafolio</a></li>
                              <li role="presentation"><a href="#">Blog</a></li>
                              <li role="presentation"><a href="#">Contacto</a></li>

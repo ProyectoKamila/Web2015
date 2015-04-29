@@ -149,8 +149,8 @@ header.principal{
 #nosotros{
 
 background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/img/intro-bg.jpg') no-repeat top center;
-	background-size: cover;
-	background-attachment: scroll;
+	background-size: cover !important;
+	background-attachment: scroll !important;
 }
 #servicios{
 	z-index: 10;
@@ -291,23 +291,7 @@ background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/im
 			}
 		}
 	}
-	.plan:hover{
 
-			margin-top: -15px;
-  			padding: 0px;
-  			box-shadow: 0px 2px 9px 5px #f0f0f0;
-		section.caracteristicas {
-		  width: 100%;
-		  background: #f0f0f0;
-		  border-bottom: 2px solid #808a89;
-		  padding: 20px;
-		  .btn{
-			  top: 50px;
-			  max-width: 180px;
-		}
-		}
-
-	}
 }
 #portafolio{
 	width: 100%;
@@ -706,6 +690,76 @@ footer{
 	background: rgba(33,33,33,0.8);
 	}
 }
+.fondo-left{
+	.cover{
+		opacity: 0;
+	}
+}
+.archive-servicios{
+	width: 100%;
+	.title-gris{
+		padding-top: 40px;
+		h1{
+			color: @gris;
+			font-size: 44px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+	.centrado{
+		font-size: 18px;
+		text-align: center;
+		color:@gris;
+	}
+	#planes{
+		.container-fluid , .plan{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	.table{
+		margin-top: 40px;
+		background: @fondo-planes;
+		th{
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background: @azul-oscuro;
+
+			p{
+				font-size: 20px;
+				line-height: 60px;
+				color: white;
+				text-transform: uppercase;
+				font-weight: 200;
+			}
+
+			img{
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+			}
+
+		}
+		.first{
+				background: @rojo;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				p{
+					color: white;
+					text-align: center;
+				}
+		}
+		td{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			p{
+				text-align: center;
+			}
+		}
+	}
+}
+
 .sangrado-bajo{
 	margin-bottom: 40px;
 }
@@ -746,7 +800,7 @@ footer{
 		height: 120px;
 		position: relative;
 		margin: 0 auto;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 		overflow: hidden;
 		border-radius: 50%;
 		img{
@@ -798,6 +852,12 @@ footer{
 .tab-rotate{
 	top: 430px !important;
 }
+.fondo-left{
+	background-position-x: -1140px !important;
+	.cover{
+		background: rgba(255, 255, 255, 0.0);
+	}
+}
 }
 
  @media (min-width: @screen-md-max) { 
@@ -833,6 +893,9 @@ footer{
 				text-align: center;
 			}
 		}
+		.container-fluid  .plan{
+			margin-bottom: 40px;
+		}
  }
 
  @media (min-width:999px){
@@ -840,6 +903,28 @@ footer{
 				color: white;
 				text-align: center;
 		}
+		#planes{
+		.container-fluid  .plan{
+			width: 20%;
+		}
+ 	}
+ 		.plan:hover{
+
+			margin-top: -15px;
+  			padding: 0px;
+  			box-shadow: 0px 2px 9px 5px #f0f0f0;
+		section.caracteristicas {
+		  width: 100%;
+		  background: #f0f0f0;
+		  border-bottom: 2px solid #808a89;
+		  padding: 20px;
+		  .btn{
+			  top: 50px;
+			  max-width: 180px;
+		}
+		}
+
+	}
  }
  @media (min-width: @screen-lg-min){
  	.portada{

@@ -30,8 +30,11 @@ function theme_custom_types() {
 
     add_custom_post_type(array(
         'type' => 'nosotros',
-        'supports' => array('title', 'nosotros', 'thumbnail'),
         'singular' => 'Nosotro'
+    ));
+    add_custom_post_type(array(
+        'type' => 'planes',
+        'singular' => 'plane'
     ));
     
     add_custom_post_type(array(

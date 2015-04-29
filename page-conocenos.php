@@ -37,22 +37,26 @@
                 </div>
             </div>
         </div>
-<section class="content-mision">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
-                        <h1><strong>MISIÓN</strong></h1>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="textual">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
+<?php $mi = query_posts(array('post_type'=>'nosotros', 'categorias'=>'mision' , 'posts_per_page'=>1));?>        
+<?php if(!empty($mi)){?>
+<?php while(have_posts()){?>
+    <section class="content-mision">
+        <?php the_post(); ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
+                     <h1><strong><?php the_title(); ?></strong></h1>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="textual">
+                       <?php the_content(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <?php } ?>
+<?php } ?>
 <div class="image-bar" style="background: url('https://scontent-lga.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/1509999_802477163139566_3091797848003757166_n.jpg?oh=f5cd3a8da0fec598d418363afd97227b&oe=55D9339D') top center;">
     <div class="cover" ></div>
 </div>
@@ -68,50 +72,67 @@
                 </div>
             </div>
         </div>
+<?php $mi = query_posts(array('post_type'=>'nosotros', 'categorias'=>'vision' , 'posts_per_page'=>1));?>        
+<?php if(!empty($mi)){?>
+    <?php while(have_posts()){?>
         <section class="content-mision">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
-                        <h1><strong>VISIÓN</strong></h1>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="textual">
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
+            <?php the_post(); ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
+                     <h1><strong><?php the_title(); ?></strong></h1>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="textual">
+                       <?php the_content(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<article id="portafolio" class="sangrado-bajo">
-  <div class="fondo" data-type="parallax" data-speed="210">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
-                        <h1><strong>SOMOS</strong></h1>
-                        <img src="<?php bloginfo('template_url');?>/images/general/liston-home.png" alt="Separador" class="img-responsive">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</h2>
-                        
-                    </div>
+    </section>
+    <?php } ?>
+<?php } ?>
+<?php $mi = query_posts(array('post_type'=>'nosotros', 'categorias'=>'introduccion' , 'posts_per_page'=>1));?>        
+<?php if(!empty($mi)){?>
+    <?php while(have_posts()){?>
+        <article id="portafolio" class="sangrado-bajo">
+            <?php the_post(); ?>
+          <div class="fondo" data-type="parallax" data-speed="210">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
+                                <h1><strong><?php the_title();?></strong></h1>
+                                <img src="<?php bloginfo('template_url');?>/images/general/liston-home.png" alt="Separador" class="img-responsive">
+                                <h2><?php echo max_charlength(get_the_content(), 253);?></h2>
+                                
+                            </div>
 
-                </div>
-            </div>
-            </div>
-</article>
+                        </div>
+                    </div>
+                    </div>
+        </article>
+        <?php } ?>
+<?php } ?>
 <section class="team-grid">
     <div class="container-flui">
         <div class="row">
-            <?php for ($i=0; $i < 12; $i++) { ?>
+            <?php 
+            $i=0;
+            query_posts(array('post_type'=>'nosotros', 'categorias'=>'galeria' , 'posts_per_page'=>-1));
+            while(have_posts()) {  the_post();?>
                 
             
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
                 <div class="profile">
-                    <img src="https://yt3.ggpht.com/-skqO0UKLD-c/AAAAAAAAAAI/AAAAAAAAAAA/_zbbhL6-ju8/s48-c-k-no/photo.jpg" alt="" class="img-responsive">
+                    <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'img-responsive' ) ); ?>
             </div>
-            <p class="name">José Vivas </p>
-            <p class="name">Lider Nacional</p>
+            <p class="name"><?php the_title(); ?> </p>
+            <p class="name"><?php echo get_field('cargo');?></p>
             </div>
+            <?php $i++; if($i==6){?>
+            <div class="clearfix"></div>
+            <?php } ?>
+
             <?php } ?>
         </div>
     </div>
