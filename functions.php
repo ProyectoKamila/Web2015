@@ -14,6 +14,12 @@ include('library/copyright.php');
 include('library/widget-delete.php');
 //Debug para las consultas
 include('library/debug.php');
+//opciones del themplate
+include('library/options.php');
+//generar las portadas
+include('library/portada.php');
+//funcion para extraer la url del thumbnail
+include('library/imgurl.php');
 //funcion para acortar cadenas
 include('library/limited-caracter.php');
 show_admin_bar( false );
@@ -44,6 +50,18 @@ function theme_custom_types() {
     add_custom_post_type(array(
         'type' => 'plantillas',
         'singular' => 'plantilla'
+    ));
+    add_custom_post_type(array(
+        'type' => 'portada',
+        'singular' => 'portada'
+    ));
+
+    add_custom_taxonomy(array(
+        'name' => 'categoria',
+        'singular' => 'categoria',
+        'genero' => 'f',
+        'post_type' => 'portada',
+        'hierarchical' => true
     ));
 
     add_custom_taxonomy(array(
