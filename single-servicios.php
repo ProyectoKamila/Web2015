@@ -38,15 +38,21 @@
             </div>
         </div>
         <?php the_post(); ?>
-<section class="archive-servicios">
+<section class="archive-servicios single-servicios">
     <div class="container">
         <div class="row">
              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-gris">
                      <h1> <?php the_title(); ?></h1>
                      <p class="centrado">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printing and typesetting industry. Lorem Ipsum has been the industry's 
+                        <?php echo get_field('intro');?>
                      </p>
-                </div>
+
+             </div>
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             <div class="content">
+                 <?php the_content(); ?>
+             </div>
+             
         </div>
     </div>   
 </section>
