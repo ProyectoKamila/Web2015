@@ -2,14 +2,14 @@
     
     if($pk_category != null){
     ?>
+                        <?php
+                        query_posts(array('post_type'=>'portada', 'posts_per_page'=>1, 'paged' => $paged,'categoria'=>$pk_category));
+                        while(have_posts()){the_post();
+                        ?>
         <div class="container-fluid cover"  id="portada1" data-type="parallax" data-speed="20" >
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 portada" >
                     <div class="row">
-                        <?php
-                        query_posts(array('post_type'=>'portada', 'posts_per_page'=>1,'categoria'=>$pk_category));
-                        while(have_posts()){the_post();
-                        ?>
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 logo">
                             <img src="<?= pk_thumbnail($post_id); ?>" alt="Proyecto Kamila Agencia Web" class="">
                         </div>
@@ -31,19 +31,20 @@
                         <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 contenido">
                             <?php the_content(); ?>
                             <a href="<?php if(get_field("enlaceb") != null){echo get_field("enlaceb");} ?>" class="btn btn-default"> <?php echo get_field("nombreb");?></a>
-                        <?php } ?>
-                            <nav>
+                           <nav>
                                 <ul class="pager">
-                                    <li><a href="#"><</a></li>
-                                    <li><a href="#">></a></li>
+                                    <li><?php previous_posts_link('<') ?></li>
+                                    <li><?php next_posts_link('>') ?></li>
                                 </ul>
-                            </nav>
+                            </nav> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     <?php
+}
 }
 }
 ?>
