@@ -31,8 +31,8 @@
                         <ul class="nav nav-pills">
                              <li role="presentation" ><a href="<?php echo home_url('conocenos');?>">Conócenos</a></li>
                              <li role="presentation"><a href="<?php echo home_url('servicios');?>">Productos y Servicios</a></li>
-                             <li role="presentation"><a href="#">Portafolio</a></li>
-                             <li role="presentation"><a href="#">Blog</a></li>
+                             <li role="presentation"><a href="<?php echo home_url('portafolio');?>">Portafolio</a></li>
+                             <li role="presentation"><a href="<?php echo home_url('blog');?>">Blog</a></li>
                              <li role="presentation"><a href="#">Contacto</a></li>
                         </ul>
                     </div>

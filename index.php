@@ -1,6 +1,8 @@
 <?php get_header(''); ?>
 
-<?php pk_portada('index'); ?>
+<?php pk_portada('index'); 
+wp_reset_query();
+?>
         
         <article id="servicios" data-type="parallax" data-speed="210">
         <div class="container">
@@ -30,6 +32,9 @@
             </div>
         </div>
         </article>
+
+        <?php $p= query_posts(array('post_type'=>'planes','posts_per_page'=>3));?>
+        <?php if(!empty($p)){?>
         <article id="planes" data-type="parallax" data-speed="210">
             <div class="container">
                 <div class="row">
@@ -39,30 +44,38 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 subtitle">
                         <p>Tenemos un plan que se ajusta a ti</p>
                     </div>
-                    <?php for($i=0; $i<3; $i++) {?>
+                    <?php while(have_posts()){
+                        the_post();
+                        ?>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 plan">
                         <header>
-                            <h2>PLAN ORO</h2>
-                            <h3>Medianas Empresas</h3>
+                            <h2><?php the_title(); ?></h2>
+                            <h3><?php echo get_field('dirigido')?></h3>
+                            <?php $n= get_field('nuevo');
+                                if(!empty($n)){
+                            ?>
+
                             <span> Nuevo</span>
+                            <?php } ?>
                         </header>
                         <section class="price">
-                            <p>12.923 Bs</p>
+                            <p><?php echo get_field('precio')?></p>
                         </section>
                         <section class="caracteristicas">
                         <ul>
-                            <li><p><strong>100</strong> Clic en publicidad</p></li>
-                            <li><p><strong>2 a 6</strong> Cuotas</p></li>
-                            <li><p><strong>2 GB</strong> Hosting</p></li>
-                            <li><p><strong>1 año</strong> Dominio</p></li>
+                            <li><p><strong><?php echo get_field('publicidad_pk')?></strong> Clic en publicidad</p></li>
+                            <li><p><strong><?php echo get_field('facilidad_de_pago')?></strong> Cuotas</p></li>
+                            <li><p><strong><?php echo get_field('hosting')?></strong> Hosting</p></li>
+                            <li><p><strong><?php echo get_field('dominio')?></strong> Dominio</p></li>
                         </ul>
-                        <a class="btn btn-default">Adquirir Ahora</a>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-default">Adquirir Ahora</a>
                         </section>
                     </div>
                     <?php } ?>
                 </div>
             </div>
         </article>
+        <?php } ?>
         <article id="portafolio">
             <div class="fondo" data-type="parallax" data-speed="210">
             <div class="container">
