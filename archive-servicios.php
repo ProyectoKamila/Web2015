@@ -7,9 +7,10 @@ wp_reset_query();
 		<div class="row">
 			 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-gris">
                      <h1>Nuestros Servicios</h1>
-                     <p class="centrado">
+                     <?php echo $db->servicios; ?>
+<!--                     <p class="centrado">
                      	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printing and typesetting industry. Lorem Ipsum has been the industry's 
-                     </p>
+                     </p>-->
                 </div>
 		</div>
 	</div>   
