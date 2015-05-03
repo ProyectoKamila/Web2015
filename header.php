@@ -6,11 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='<?php bloginfo('stylesheet_url'); ?>' rel='stylesheet' type='text/css'> 
         <?php wp_head(); ?>
-        <?php
-        require_once("widescreen.php");
-        //echo "Resolucion de pantalla Ancho:".$_SESSION['PantallaAncho'].'<br>';
-        //echo "Resolucion de pantalla Alto.:" . $_SESSION['PantallaAlto'] . '<br>';
-        ?>
+        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

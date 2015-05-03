@@ -14,7 +14,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 contact-form">
-                                    <form action="">
+                                    <form action="" method="post">
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                             <input class="text margin-top" type="text" name="nombre" placeholder="Nombre" required>
                                         </div>
@@ -22,7 +22,7 @@
                                             <input class="text margin-top" type="text" name="apellido" placeholder="Apellido">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                            <input class="text" type="text" name="telefono" placeholder="Telefono" required>
+                                            <input class="text" type="text" name="phone" placeholder="Telefono" required>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                             <input class="text" type="email" name="email" placeholder="Email" required>
@@ -92,7 +92,49 @@
             </div>
         </footer>
         
-        <?php wp_footer(); ?>
+        <?php wp_footer(); 
+                  if (isset($_POST['email'])) {
+                //echo"<h1>Pasoo uno !</h1>";
+                        if (!empty($_POST['email']) && !empty($_POST['nombre'])) {
+                            require_once ABSPATH . WPINC . '/class-phpmailer.php';
+                            $mail = new PHPMailer();
+
+                            $mail->AddAddress('ventas@proyectokamila.com');
+                            $mail->From = 'ventas@proyectokamila.com';
+                            $mail->FromName = 'Solicitud de contacto';
+                            $asunto = 'Solicitud de Contacto';
+                            $contenido = '<div style="font-color: #000;">';
+                            $contenido .= '<h2>Solicitud de Contacto Venezuela.</h2>';
+                            $contenido .= '<p>Enviado el ' . date("d/m/Y") . '</p>';
+                            $contenido .= '<p>vengo de' . bloginfo('template_url') . '</p>';
+                            $contenido .= '<hr />';
+                            $contenido .= '<p><strong>Nombre: </strong>' . $_POST['nombre'] . ' ' . $_POST['apellido'] .'</p>';
+                            $contenido .= '<p><strong>Email: </strong>' . $_POST['email'] . '</p>';
+                            $contenido .= '<p><strong>Telefono: </strong>' . $_POST['phone'] . '</p>';
+                            $contenido .= '<p><strong>Mensaje: </strong>' . $_POST['mensaje'] . '</p>';
+                            $contenido .= '<hr />';
+                            $contenido .= '</div>';
+
+                            $mail->Subject = $asunto;
+                            $mail->Body = $contenido;
+                            $mail->IsHTML();
+
+                //      add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+                //      $mail = wp_mail($correo, $asunto, $contenido, $headers);
+
+                        if ($mail->send()) {
+                            echo $mensaje = '<script type="text/javascript">alert("Su mensaje ha sido enviado con éxito, Gracias por Contactarnos.");</script>';
+                            redirect(bloginfo('template_url'));
+                        } else {
+                            echo $mensaje = '<script type="text/javascript">alert("Error al Enviar.");</script>';
+                            redirect(bloginfo('template_url') . '/contacto');
+                        }
+                    } else {
+                        echo $mensaje = '<script type="text/javascript">alert("Faltan campos por llenar.");</script>';
+                        redirect(bloginfo('template_url') . '/contacto');
+                    }
+                    }
+        ?>
     </body> 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
