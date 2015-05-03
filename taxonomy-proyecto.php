@@ -16,8 +16,7 @@
             </div>
         </div>
 <article id="portafolio">
-	   <?php $p = query_posts(array('post_type'=>'portafolio','posts_per_page'=>-1,'orderby'=>'rand'));?>
-                <?php if(!empty($p)){?>
+	
             <div class="container-fluid content-item sin-padding">
                 <div class="row">
                 
@@ -29,7 +28,7 @@
                           <h4><?php the_title(); ?></h4>
                         </div>
                         <?php $image_url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );?>
-						<a href="<?php the_permalink();?>">
+                        <a href="<?php the_permalink();?>">
                         <div class="folio">
                             <div class="image" style="background-image: url(<?php echo $image_url; ?>) ;"></div>
                             <div class="cover-image"></div>
@@ -39,7 +38,7 @@
                 <?php } ?>
                 </div>
             </div>
-            <?php } ?>
+            
 </archive>
 </section>
 <?php

@@ -103,11 +103,12 @@ wp_reset_query();
                           <h4><?php the_title(); ?></h4>
                         </div>
                         <?php $image_url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );?>
-
-                        <div class="folio">
-                            <div class="image" style="background-image: url(<?php echo $image_url; ?>) ;"></div>
-                            <div class="cover-image"></div>
-                        </div>
+                        <a href="<?php the_permalink();?>">
+                            <div class="folio">
+                                <div class="image" style="background-image: url(<?php echo $image_url; ?>) ;"></div>
+                                <div class="cover-image"></div>
+                            </div>
+                        </a>
                     </div>
                 <?php } ?>
                 </div>

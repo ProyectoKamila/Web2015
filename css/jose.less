@@ -759,14 +759,35 @@ footer{
 		}
 	}
 }
-
+.sin-padding{
+	padding: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
 .archive-portafolio{
 	.portafolio{
 		margin-top: 50px;
 		text-align: center;
+		width: 100%;
+		li{
+			text-align: center;
+			float: none;
+			margin: 0 auto;
+			max-width: 220px;
+			display: inline-block;
+			margin-top: 5px;
+		}
 		li a{
 			background: white;
+			color: @gris-claro;
+			border: 1px solid @gris-claro;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+		li a:hover, li a:active li a.active{
 			color: @rojo;
+			background: white;
+			border: 1px solid @rojo;
 		}
 	}
 }

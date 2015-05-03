@@ -77,52 +77,141 @@ wp_reset_query();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabla">
+
                     <table class="table table-striped  table-condensed table-responsive">
                         <th>
                             <p>
                             Planes
                         </p>
+                        <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+
                         </th>
-                        
+                        <?php while(have_posts()){ the_post();?>
                         <th>
-                            <img src="" alt="" class="icon-planes">
+                            <img src="<?php echo get_field('icono_plan');?>" alt="" class="icon-planes">
                         </th>
-                        <th>
-                            <img src="" alt="" class="icon-planes">
-                        </th>
-                            <th>
-                            <img src="" alt="" class="icon-planes">
-                        </th>
-                            <th>
-                            <img src="" alt="" class="icon-planes">
-                        </th>
-                            <th>
-                            <img src="" alt="" class="icon-planes">
-                        </th>
+                        <?php }?>
+                       
                     <tr class="first">
                         <td><p>Beneficios</p></td>
-                        <td><p>Bronce <br/> 18.000Bsf</p></td>
-                        <td><p>Plata <br/> 28.000Bsf</p></td>
-                        <td><p>Oro <br/> 49.000Bsf</p></td>
-                        <td><p>Platinium<br/> 68.000Bsf</p></td>
-                        <td><p>Diamante<br/> 98.000Bsf</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('precio');?></p></td>
+                        <?php } ?>
+                       
                     </tr>
                    <tr >
-                        <td><p>Beneficios</p></td>
-                        <td><p>Bronce <br/> 18.000Bsf</p></td>
-                        <td><p>Plata <br/> 28.000Bsf</p></td>
-                        <td><p>Oro <br/> 49.000Bsf</p></td>
-                        <td><p>Platinium<br/> 68.000Bsf</p></td>
-                        <td><p>Diamante<br/> 98.000Bsf</p></td>
+                        <td><p>Logo</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('logo');?></p></td>
+                        <?php } ?>
+                       
                     </tr>
-                    <tr >
-                        <td><p>Beneficios</p></td>
-                        <td><p>Bronce <br/> 18.000Bsf</p></td>
-                        <td><p>Plata <br/> 28.000Bsf</p></td>
-                        <td><p>Oro <br/> 49.000Bsf</p></td>
-                        <td><p>Platinium<br/> 68.000Bsf</p></td>
-                        <td><p>Diamante<br/> 98.000Bsf</p></td>
+                    <tr>
+                        <td><p>Galeria</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('galeria');?></p></td>
+                        <?php } ?>
+                       
                     </tr>
+                    <tr>
+                        <td><p>Tienda Virtual</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('tienda_virtual');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                        <tr>
+                        <td><p>Facilidad de pago</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('facilidad_de_pago');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                    <tr>
+                        <td><p>Autoadministrable</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('autoadministrable');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                    <tr>
+                        <td><p>Diseño unico</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('diseno_unico');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                    <tr>
+                        <td><p>Portafolio Proyecto Kamila</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('portafolio_pk');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                           <tr>
+                        <td><p>Publicidad Proyecto Kamila</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('publicidad_pk');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+       <tr>
+                        <td><p>SEO</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('seo');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                           <tr>
+                        <td><p>SEM</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('sem');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                           <tr>
+                        <td><p>Cambios</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('cambios');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                           <tr>
+                        <td><p>Hosting</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('hosting');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                           <tr>
+                        <td><p>Correo</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('correo');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>
+                           <tr>
+                        <td><p>Dominio</p></td>
+                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
+                        <?php while(have_posts()){ the_post();?>
+                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('dominio');?></p></td>
+                        <?php } ?>
+                       
+                    </tr>   
                     </table>
                 </div>
             </div>
