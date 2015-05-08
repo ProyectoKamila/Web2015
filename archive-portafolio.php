@@ -8,7 +8,7 @@
                 </div>
                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="textual center">
-                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+                       <p></p>
                     </div>
 
                     <?php get_template_part('subcategories');?>
