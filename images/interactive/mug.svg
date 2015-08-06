@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<g>
+	<circle id="circulo_1_" fill="none" stroke="#BFBBBB" stroke-width="3" stroke-miterlimit="10" cx="250" cy="250.3" r="244.7"/>
+	<path id="trazo3" fill="#7E827E" d="M249.1,128c-2-28.1,24.7-44.9,28.1-69.6c1.5-11.8-2.9-22.2-12.4-27.7c0,0-8.4-6.4-6.9-4.4
+		c2,2.5,4.9,4.4,5.4,4.9c6.4,6.4,15.8,13.8,2.9,32.1c-10.8,15.3-31.1,43.4-18.2,65.2C248.5,129.5,249.1,129.5,249.1,128z	">
+<animateTransform  type="translate" fill="remove" attributeName="transform" accumulate="none" dur="5s" additive="replace" restart="always" calcMode="linear" values="0,-2;0,-3" id="anskljdf" repeatCount="indefinite" attributeType="XML">
+			</animateTransform>
+		
+			<animate  fill="remove" begin="1s;anskljdf.end" attributeName="opacity" accumulate="none" dur="4s" additive="replace" from="1" to="0" restart="always" calcMode="linear" id="animation1" repeatCount="indefinite">
+			</animate>
+	</path>
+	<path id="trazo2" fill="#7E827E" d="M237.3,121.1c-1.5-20.7,18.2-33.1,20.2-50.9c1-8.9-2-16.3-8.9-20.2c0,0-6.4-4.4-4.9-2.9
+		c1.5,2,3.5,2.9,3.9,3.5c4.4,4.4,11.4,10.4,2,23.2c-7.9,10.8-22.7,31.6-13.3,47.9C236.7,122.1,237.3,122.1,237.3,121.1z	">
+<animateTransform  type="translate" fill="remove" attributeName="transform" accumulate="none" dur="5s" additive="replace" restart="always" calcMode="linear" values="0,-2;0,-3" id="anskljdf" repeatCount="indefinite" attributeType="XML">
+			</animateTransform>
+		
+			<animate  fill="remove" begin="1s;anskljdf.end" attributeName="opacity" accumulate="none" dur="4s" additive="replace" from="1" to="0" restart="always" calcMode="linear" id="animation1" repeatCount="indefinite">
+			</animate>
+	</path>
+	<path id="trazo1" fill="#5D5D5D" d="M252,124.5c-1.5-11.4,8.4-29.6,15.8-39.5c5.9-8.4,9.9-13.8,12.8-25.7
+		c1,10.8-4.9,21.3-11.4,30.1C264.4,95.9,254,112.7,252,124.5C252.6,124.5,252,124.5,252,124.5z	">
+<animateTransform  type="translate" fill="remove" attributeName="transform" accumulate="none" dur="5s" additive="replace" restart="always" calcMode="linear" values="0,-2;0,-3" id="anskljdf" repeatCount="indefinite" attributeType="XML">
+			</animateTransform>
+		
+			<animate  fill="remove" begin="1s;anskljdf.end" attributeName="opacity" accumulate="none" dur="4s" additive="replace" from="1" to="0" restart="always" calcMode="linear" id="animation1" repeatCount="indefinite">
+			</animate>
+	</path>
+	<g>
+		<polygon fill="#E6E7E8" points="166.7,450.8 252.6,450.8 252.6,172.5 137.1,172.5 		"/>
+		<polygon fill="#7F1608" points="153.3,325.4 245.1,325.4 245.1,273.6 147.4,273.6 		"/>
+		<path fill="#D2D3D5" d="M135.1,127c1-5.9,5.9-10.8,12.4-10.8H256V166H147.4h-9.4c-6.9,0-12.4-5.4-12.4-12.4v-14.3
+			C125.2,133,129.7,128,135.1,127"/>
+		<polygon fill="#D2D3D5" points="331,450.8 249.1,450.8 249.1,172.5 361.1,172.5 		"/>
+		<polygon fill="#7F1608" points="344.3,325.4 252.6,325.4 252.6,273.6 350.3,273.6 		"/>
+		<path fill="#E6E7E8" d="M363.1,127c-1-5.9-5.9-10.8-12.4-10.8H249.1V166h101.7h9.4c6.9,0,12.4-5.4,12.4-12.4v-14.3
+			C372.5,133,368.5,128,363.1,127"/>
+		<circle fill="#821608" cx="249.1" cy="299.2" r="42.4"/>
+		<circle fill="#FFFFFF" cx="249.1" cy="299.2" r="34.1"/>
+		<g>
+			<g>
+				
+					<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="48.7329" y1="-195.0954" x2="48.7329" y2="-209.2691" gradientTransform="matrix(3.6058 0 0 3.6058 62.5 1028.85)">
+					<stop  offset="0" style="stop-color:#5E0000"/>
+					<stop  offset="1" style="stop-color:#FF0000"/>
+				</linearGradient>
+				<path fill="url(#SVGID_1_)" d="M240.2,325.4c-5.9,0-8.9-2.9-8.9-8.4v-11.4l-3.5-4.4l3.5-3.9v-10.4c0-6.4,2.9-9.4,8.9-9.4h6.9
+					v4.4h-6.9c-2,0-2.9,1-2.9,2.9v14.3l-2,2.5l2,2.9v6.9c0,2,1,2.9,2.9,2.9h8.4v11.4L240.2,325.4z"/>
+			</g>
+			<g>
+				
+					<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="54.9049" y1="-195.0954" x2="54.9049" y2="-209.2691" gradientTransform="matrix(3.6058 0 0 3.6058 62.5 1028.85)">
+					<stop  offset="0" style="stop-color:#5E0000"/>
+					<stop  offset="1" style="stop-color:#FF0000"/>
+				</linearGradient>
+				<path fill="url(#SVGID_2_)" d="M250.1,325.4v-11.4h8.4c2,0,2.9-1,2.9-2.9v-6.9l2-2.9l-2-2.5v-14.3c0-2-1-2.5-2.9-2.9h-6.9v-4.4
+					h6.9c5.9,0,8.9,2.9,8.9,9.4v10.4l3.5,3.9l-3.5,4.4v11.4c0,5.4-2.9,8.4-8.9,8.4L250.1,325.4z"/>
+			</g>
+			<g>
+				
+					<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="51.8004" y1="-195.001" x2="51.8004" y2="-209.2656" gradientTransform="matrix(3.6058 0 0 3.6058 62.5 1028.85)">
+					<stop  offset="0" style="stop-color:#5E0000"/>
+					<stop  offset="1" style="stop-color:#FF0000"/>
+				</linearGradient>
+				<rect x="248.5" y="272.1" fill="url(#SVGID_3_)" width="1.5" height="17.8"/>
+				
+					<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="51.7448" y1="-195.144" x2="51.7448" y2="-209.2775" gradientTransform="matrix(3.6058 0 0 3.6058 62.5 1028.85)">
+					<stop  offset="0" style="stop-color:#5E0000"/>
+					<stop  offset="1" style="stop-color:#FF0000"/>
+				</linearGradient>
+				<path fill="url(#SVGID_4_)" d="M253,293.8c0,1.5-1,2.5-2.5,2.5h-2.9c-1.5,0-2.5-1-2.5-2.5v-6.9c0-1.5,1-2.5,2.5-2.5h2.9
+					c1.5,0,2.5,1,2.5,2.5V293.8z"/>
+			</g>
+		</g>
+	</g>
+</g>
+
+</svg>

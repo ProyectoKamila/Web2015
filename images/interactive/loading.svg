@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 126 117" enable-background="new 0 0 126 117" xml:space="preserve">
+<g>
+	<circle fill="#FFFFFF" cx="62.4" cy="54.6" r="53.4"/>
+	<circle fill="none" stroke="#93278F" stroke-miterlimit="10" stroke-dasharray="11.9742,11.9742" cx="62.4" cy="54.6" r="53.4">
+
+
+	<animateTransform attributeName="transform"
+	 attributeType="XML"
+
+	 type="rotate"
+	 from="0 50 50"
+	 to="360 50 50"
+	 dur="10s"
+	 repeatCount="indefinite"/>
+
+</circle>
+
+<circle fill="#A41BAF" cx="62.4" cy="54.6" r="44.4"/>
+
+<path fill="#F0F0F2" d="M39.6,67.8V38.7c0-1.5,1.2-2.7,2.7-2.7h0.5c1.5,0,2.7,1.2,2.7,2.7v29.1c0,1.5-1.2,2.7-2.7,2.7h-0.5C40.8,70.5,39.6,69.3,39.6,67.8z">
+
+				<animateTransform id="anskljdf" attributeName="transform"
+	 attributeType="XML"
+
+	 type="translate"
+  dur="1s"
+  values="0,6,,0,-6;0,6"
+	 repeatCount="indefinite"/>
+
+	</path>
+
+<path fill="#F0F0F2" d="M51.4,67.8V38.7c0-1.5,1.2-2.7,2.7-2.7h0.5c1.5,0,2.7,1.2,2.7,2.7v29.1c0,1.5-1.2,2.7-2.7,2.7h-0.5
+	C52.6,70.5,51.4,69.3,51.4,67.8z">
+
+					<animateTransform id="anskljdf" attributeName="transform"
+	 attributeType="XML"
+
+	 type="translate"
+	 begin=".1"
+  dur="1s"
+  values="0,15,,0,-15;0,15"
+	 repeatCount="indefinite"/>
+
+	</path>
+
+<path fill="#F0F0F2" d="M63.3,67.8V38.7c0-1.5,1.2-2.7,2.7-2.7h0.5c1.5,0,2.7,1.2,2.7,2.7v29.1c0,1.5-1.2,2.7-2.7,2.7H66
+	C64.5,70.5,63.3,69.3,63.3,67.8z">
+					<animateTransform id="anskljdf" attributeName="transform"
+	 attributeType="XML"
+
+	 type="translate"
+	  begin=".2"
+  dur="1s"
+  values="0,15,,0,-15;0,15"
+	 repeatCount="indefinite"/>
+
+	</path>
+
+<path fill="#F0F0F2" d="M75.1,67.8V38.7c0-1.5,1.2-2.7,2.7-2.7h0.5c1.5,0,2.7,1.2,2.7,2.7v29.1c0,1.5-1.2,2.7-2.7,2.7h-0.5
+	C76.3,70.5,75.1,69.3,75.1,67.8z">
+					<animateTransform id="anskljdf" attributeName="transform"
+	 attributeType="XML"
+
+	 type="translate"
+	 begin=".3"
+  dur="1s"
+  values="0,15,,0,-15;0,15"
+	 repeatCount="indefinite"/>
+
+	</path>
+
+
+</g>
+</svg>
