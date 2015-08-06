@@ -45,11 +45,7 @@ wp_reset_query();
         <div class="image-bar fondo-left" style="background: url('<?php bloginfo('template_url');?>/images/bar.jpg') top center;">
     <div class="cover" ></div>
 </div>
-<<<<<<< HEAD
-<?php $p = query_posts(array('post_type'=>'planes','posts_per_page'=>5));?>
-=======
 <?php $p = query_posts(array('post_type'=>'planes','posts_per_page'=>3));?>
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
 <?php if(!empty($p)){?>
     <article id="planes" data-type="parallax" data-speed="210">
             <div class="container-fluid">
@@ -146,37 +142,13 @@ wp_reset_query();
                        
                     </tr>
                     <tr>
-<<<<<<< HEAD
-                        <td><p>Diseño único</p></td>
-=======
                         <td><p>Diseño unico</p></td>
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                        <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
                         <?php while(have_posts()){ the_post();?>
                         <td><p><?php the_title(); ?> <br/> <?php echo get_field('diseno_unico');?></p></td>
                         <?php } ?>
                        
                     </tr>
-<<<<<<< HEAD
-                     <tr>
-                        <td><p>Diseño Responsive</p></td>
-                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
-                        <?php while(have_posts()){ the_post();?>
-                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('diseno_responsive');?></p></td>
-                        <?php } ?>
-                       
-                    </tr>
-                    
-                         <tr>
-                        <td><p>Social media</p></td>
-                       <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>
-                        <?php while(have_posts()){ the_post();?>
-                        <td><p><?php the_title(); ?> <br/> <?php echo get_field('social_media');?></p></td>
-                        <?php } ?>
-                       
-                    </tr>
-=======
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                     <tr>
                         <td><p>Portafolio Proyecto Kamila</p></td>
                        <?php query_posts(array('post_type'=>'planes','posts_per_page'=>5))?>

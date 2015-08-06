@@ -18,20 +18,13 @@
                              <li role="presentation"><a href="<?php if(get_field("quinto_enlace") != null){echo get_field("quinto_enlace");} ?>"><?php echo get_field("nombre5");?></a></li>
                              <li role="presentation"><a href="<?php if(get_field("cuarto_enlace") != null){echo get_field("cuarto_enlace");} ?>"><?php echo get_field("nombre4");?></a></li>
                              <li role="presentation"><a href="<?php if(get_field("tercer_enlace") != null){echo get_field("tercer_enlace");} ?>"><?php echo get_field("nombre3");?></a></li>
-<<<<<<< HEAD
                              <li role="presentation"><a href="<?php if(get_field("segundo_enlace") != null){echo get_field("segundo_enlace");} ?>"><?php echo get_field("nombre2")?></a></li>
-=======
-                             <li role="presentation"><a href="<?php if(get_field("segundo_enlace") != null){echo get_field("segundo_enlace");} ?>"><?php echo get_field("nombre2;")?></a></li>
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                              <li role="presentation" ><a href="<?php if(get_field("primer_enlace") != null){echo get_field("primer_enlace");} ?>"><?php echo get_field("nombre1");?></a></li>
                         </ul>  
                         </div>
                         <div class="clearfix"></div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 titulo">
-<<<<<<< HEAD
 <div style="display:none"><?php the_title(); ?></div>
-=======
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                             <h1><?= get_field("titulo_primera")?> <strong><?= get_field("titulo_segunda")?></strong></h1>
                             <h2 class="hidden-xs"><strong><?= get_field("sustitulo")?></strong> <?= get_field("sustitulo2")?></h2>
                         </div>
@@ -54,8 +47,4 @@
 }
 }
 }
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3

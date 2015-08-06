@@ -136,11 +136,7 @@ wp_reset_query();
                     <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-2 content-sms">
                         <img src="<?php bloginfo('template_url');?>/images/general/tecnologia.png" alt="">
                         <img src="<?php bloginfo('template_url');?>/images/general/liston-home.png" alt="Separador" class="img-responsive">
-<<<<<<< HEAD
-                        <p> En la tecnolog&iacute;a no hay dimensiones limitadas <br>
-=======
                         <p> En la tecnologia no hay dimensiones limitadas <br>
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                             La Creatividad es la base de tus sue&ntilde;os</p>
                     </div>
                 </div>
