@@ -18,11 +18,8 @@ include('library/debug.php');
 include('library/options.php');
 //generar las portadas
 include('library/portada.php');
-<<<<<<< HEAD
 //generar las pk_portada_landing
 include('library/pk_portada_landing.php');
-=======
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
 //funcion para extraer la url del thumbnail
 include('library/imgurl.php');
 //funcion para acortar cadenas
@@ -63,15 +60,11 @@ function theme_custom_types() {
         'type' => 'portada',
         'singular' => 'portada'
     ));
-<<<<<<< HEAD
     add_custom_post_type(array(
         'type' => 'portada-landing',
         'singular' => 'portada Landing',
         'supports' => array('title','thumbnail')
     ));
-=======
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
-
     add_custom_taxonomy(array(
         'name' => 'categoria',
         'singular' => 'categoria',
@@ -79,7 +72,6 @@ function theme_custom_types() {
         'post_type' => 'portada',
         'hierarchical' => true
     ));
-<<<<<<< HEAD
     add_custom_taxonomy(array(
         'name' => 'categoria',
         'singular' => 'categoria',
@@ -87,8 +79,6 @@ function theme_custom_types() {
         'post_type' => 'portada-landing',
         'hierarchical' => true
     ));
-=======
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
 
     add_custom_taxonomy(array(
         'name' => 'categorias',
@@ -112,5 +102,3 @@ function theme_custom_types() {
         'hierarchical' => true
     ));
 }
-
-?>
