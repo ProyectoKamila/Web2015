@@ -5,7 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='<?php bloginfo('stylesheet_url'); ?>' rel='stylesheet' type='text/css'> 
+<<<<<<< HEAD
         <a href="https://plus.google.com/109942559111065837951" rel="publisher"></a>
+=======
+        <a href="https://plus.google.com/109942559111065837951" rel="publisher">Google+</a>
+>>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
         <META content="index" name="robots" />
         <META content="index" name="googlebot" />
         <meta content="7 days" name="revisit-after" />
@@ -52,7 +56,11 @@ _atrk_opts = { atrk_acct:"m0sii1aUCm00ih", domain:"proyectokamila.com",dynamic: 
                              <li role="presentation"><a href="<?php echo home_url('servicios');?>">Productos y Servicios</a></li>
                              <li role="presentation"><a href="<?php echo home_url('portafolio');?>">Portafolio</a></li>
                              <li role="presentation"><a href="<?php echo home_url('blog');?>">Blog</a></li>
+<<<<<<< HEAD
                              <li role="presentation"><a href="#contactar">Contacto</a></li>
+=======
+                             <li role="presentation"><a href="<?php echo home_url('blog');?>">Contacto</a></li>
+>>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                         </ul>
                     </div>
                 </div>

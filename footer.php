@@ -1,5 +1,9 @@
        <?php $db = select_pkconfig('mt_pkconfig'); ?>
+<<<<<<< HEAD
 <article id="contactar"class="contactanos">
+=======
+<article class="contactanos">
+>>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
             <div class="container">
                 <div class="row">
                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">
@@ -24,7 +28,11 @@
                                             <input class="text margin-top" type="text" name="apellido" placeholder="Apellido">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<<<<<<< HEAD
                                             <input class="text" type="text" name="phone" placeholder="Teléfono" required>
+=======
+                                            <input class="text" type="text" name="phone" placeholder="Telefono" required>
+>>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                             <input class="text" type="email" name="email" placeholder="Email" required>
