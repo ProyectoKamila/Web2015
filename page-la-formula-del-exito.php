@@ -80,7 +80,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="fa fa-map-o"></span></span>
-                          <select name="fechas" id="" required>
+                          <select name="fecha" id="" required>
                               <option value="">Seleciona Fecha</option>
                               <option value="18-08">18 de Agosto</option>
                               <option value="19-08">19 de Agosto</option>
