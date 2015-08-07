@@ -37,7 +37,7 @@
         </div>
         <div class="col-xs-12">
             <div class="pre-title">
-                <h1>Te estabamos esperando</h1>    
+                <h1>Te estabámos esperando</h1>    
                 <p>Completa todos los campos y haz click en <strong>Completar Inscripción</strong></p>
             </div>
             <form action="" method="POST">
@@ -68,7 +68,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="fa fa-phone"></span></span>
-                        <input type="phone" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1" name="phone">
+                        <input type="phone" class="form-control" placeholder="Teléfono" aria-describedby="basic-addon1" name="phone">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
