@@ -2,7 +2,7 @@
 <div id="wrapper1">
     <ul id="slider1">
         <?php for ($i = 1; $i <= 1; $i++): ?>
-            <li><?php pk_portada_landing('formula-del-exito', $i); ?></li>
+            <li><?php pk_portada_landing('la-formula-del-exito', $i); ?></li>
         <?php endfor; ?>
     </ul>
 </div>
