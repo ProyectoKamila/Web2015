@@ -141,7 +141,7 @@ get_footer('landing');
 
                         if ($mail->send()) {
                             echo $mensaje = '<script type="text/javascript">alert("Su mensaje ha sido enviado con éxito, Gracias por Inscribirte.");</script>';
-                            redirect('http://www.proyectokamila.com');
+                            
                         } else {
                             echo $mensaje = '<script type="text/javascript">alert("Error al Enviar.");</script>';
                             
