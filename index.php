@@ -24,11 +24,7 @@ wp_reset_query();
                     </div>
                     <a href="<?php the_permalink(); ?>"><h3 class="services-title"><?php the_title(); ?></h3></a>
                     <div class="services-excerpt">
-<<<<<<< HEAD
-                        <p><?php echo max_charlength(get_the_content(), 310);?></p>
-=======
                         <p><?php echo max_charlength(get_the_content(), 320);?></p>
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
                     </div>
                 </div>
                     <?php } ?>

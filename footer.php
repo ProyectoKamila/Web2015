@@ -1,9 +1,5 @@
        <?php $db = select_pkconfig('mt_pkconfig'); ?>
-<<<<<<< HEAD
-<article id="contactar"class="contactanos">
-=======
 <article class="contactanos">
->>>>>>> 6521d9467ae5f892f15c25d2dfa9f33f8e8f64f3
             <div class="container">
                 <div class="row">
                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title-line">

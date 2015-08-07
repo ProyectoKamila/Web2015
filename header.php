@@ -5,14 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='<?php bloginfo('stylesheet_url'); ?>' rel='stylesheet' type='text/css'> 
-        <a href="https://plus.google.com/109942559111065837951" rel="publisher">Google+</a>
+        <a href="https://plus.google.com/109942559111065837951" rel="publisher"></a>
         <META content="index" name="robots" />
         <META content="index" name="googlebot" />
         <meta content="7 days" name="revisit-after" />
         <META NAME="Author" CONTENT="proyectokamila.com, C.A" />
         <meta name="google-site-verification" content="qRVAiHT8rcFPCLEWY9026DjngXi_OQpg1gxOoPkAuq4" />
-        <?php wp_head(); ?>
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url')?>/css/main.less" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
