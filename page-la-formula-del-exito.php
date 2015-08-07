@@ -1,8 +1,8 @@
 <?php get_header(''); ?>
 <div id="wrapper1">
     <ul id="slider1">
-        <?php for ($i = 1; $i <= 2; $i++): ?>
-            <li><?php pk_portada_landing('formula-del-exito', 1); ?></li>
+        <?php for ($i = 1; $i <= 1; $i++): ?>
+            <li><?php pk_portada_landing('formula-del-exito', $i); ?></li>
         <?php endfor; ?>
     </ul>
 </div>
@@ -141,14 +141,14 @@ get_footer('landing');
 
                         if ($mail->send()) {
                             echo $mensaje = '<script type="text/javascript">alert("Su mensaje ha sido enviado con éxito, Gracias por Inscribirte.");</script>';
-                            redirect(home_url(''));
+                            redirect('http://www.proyectokamila.com');
                         } else {
                             echo $mensaje = '<script type="text/javascript">alert("Error al Enviar.");</script>';
-                            redirect(bloginfo('template_url') . '/contacto');
+                            
                         }
                     } else {
                         echo $mensaje = '<script type="text/javascript">alert("Faltan campos por llenar.");</script>';
-                        redirect(bloginfo('template_url') . '/contacto');
+                        
                     }
                     }
         ?>
