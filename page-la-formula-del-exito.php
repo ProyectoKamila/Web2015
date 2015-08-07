@@ -107,7 +107,7 @@ wp_reset_query();
 <?php
 get_footer('landing');
 ?>
- <?php wp_footer(); 
+ <?php
                   if (isset($_POST['email'])) {
                 //echo"<h1>Pasoo uno !</h1>";
                         if (!empty($_POST['email']) && !empty($_POST['nombre'])) {
@@ -140,8 +140,8 @@ get_footer('landing');
                 //      $mail = wp_mail($correo, $asunto, $contenido, $headers);
 
                         if ($mail->send()) {
-                            echo $mensaje = '<script type="text/javascript">alert("Su mensaje ha sido enviado con éxito, Gracias por Contactarnos.");</script>';
-                            redirect(bloginfo('template_url'));
+                            echo $mensaje = '<script type="text/javascript">alert("Su mensaje ha sido enviado con éxito, Gracias por Inscribirte.");</script>';
+                            redirect(home_url(''));
                         } else {
                             echo $mensaje = '<script type="text/javascript">alert("Error al Enviar.");</script>';
                             redirect(bloginfo('template_url') . '/contacto');
