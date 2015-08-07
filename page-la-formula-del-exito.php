@@ -121,7 +121,6 @@ get_footer('landing');
                             $contenido = '<div style="font-color: #000;">';
                             $contenido .= '<h2>Solicitud de CMV.</h2>';
                             $contenido .= '<p>Enviado el ' . date("d/m/Y") . '</p>';
-                            $contenido .= '<p>vengo de' . bloginfo('template_url') . '</p>';
                             $contenido .= '<hr />';
                             $contenido .= '<p><strong>Nombre: </strong>' . $_POST['nombre'] . ' ' . $_POST['apellido'] .'</p>';
                             $contenido .= '<p><strong>Email: </strong>' . $_POST['email'] . '</p>';
