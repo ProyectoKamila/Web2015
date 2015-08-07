@@ -3,7 +3,7 @@
     if($pk_category != null){
     ?>
                         <?php
-                        query_posts(array('post_type'=>'portada-landing', 'posts_per_page'=>1, 'paged' => $pag,'categoria'=>$pk_category));
+                        query_posts(array('post_type'=>'portada-landing', 'posts_per_page'=>1, 'paged' => $pag,'categoria1'=>$pk_category));
                         while(have_posts()){the_post();
                         ?>
 <div class="container-fluid cover"  id="" data-type="parallax" data-speed="20" style="background: url('<?php echo get_field("imagen_de_fonfo");?>') top center; background-size:cover; background-repeat: no-repeat;" >

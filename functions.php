@@ -73,13 +73,19 @@ function theme_custom_types() {
         'hierarchical' => true
     ));
     add_custom_taxonomy(array(
-        'name' => 'categoria',
+        'name' => 'categoria1',
         'singular' => 'categoria',
         'genero' => 'f',
         'post_type' => 'portada-landing',
         'hierarchical' => true
     ));
-
+    add_custom_taxonomy(array(
+        'name' => 'categoria',
+        'singular' => 'categoria',
+        'genero' => 'f',
+        'post_type' => 'portada',
+        'hierarchical' => true
+    ));
     add_custom_taxonomy(array(
         'name' => 'categorias',
         'singular' => 'categoria',

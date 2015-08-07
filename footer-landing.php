@@ -1,12 +1,12 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="<?php bloginfo('template_url');?>/scripts/main.js"></script>
-    <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/scripts/AnythingSlider/js/jquery.min.js"><\/script>')</script>
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/scripts/AnythingSlider/css/anythingslider.css">
-	<script src="<?php bloginfo('template_url'); ?>/scripts/AnythingSlider/js/jquery.anythingslider.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/scripts/slider/js/jquery.min.js"><\/script>')</script>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/scripts/slider/css/slider.css">
+	<script src="<?php bloginfo('template_url'); ?>/scripts/slider/js/jquery.slider.js"></script>
 	<script>
 	$(function () {
-		$('#slider1').anythingSlider({
+		$('#slider1').slider({
 //			theme : 'metallic',
 			expand       : true,
 			autoPlay     : true,

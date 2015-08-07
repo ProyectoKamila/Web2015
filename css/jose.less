@@ -982,6 +982,8 @@ html {
 }
 .fon1{
     background: url(../images/frojo.png) top center no-repeat;
+    background-size:cover;
+    overflow:hidden;
 }
 .pre-title{
     text-align: center;
@@ -996,7 +998,7 @@ html {
     }
 }
 .input-group{
-    background: yellow;
+    
     margin-top:20px;
     margin-bottom: 20px;
     .input-group-addon{
@@ -1009,8 +1011,32 @@ html {
     input{
         background: white;
         color: @rojo;
-    }    
+        height:35px;
+    }
+    select{
+    	background:white;
+    	width:100%;
+    	height:35px;
+    	border-radius:0px;
+    }
+    
 }
+.send{
+	.input-group-addon{
+    	background:@gris;
+    	color:white;
+	}
+	span.fa{
+        color: white;
+        
+    }
+	input{
+			background:@gris;
+    	color:white;
+    	font-weight:200;
+    	
+	}
+    }
 .img-center{
     display: block;
     margin: 0 auto;

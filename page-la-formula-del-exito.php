@@ -38,18 +38,63 @@
         <div class="col-xs-12">
             <div class="pre-title">
                 <h1>Te estabamos esperando</h1>    
-                <p>Completa todos los campos y haz click en <strong>Completar Inscripcion</strong></p>
+                <p>Completa todos los campos y haz click en <strong>Completar Inscripción</strong></p>
             </div>
-            <form action="action" method="POST">
+            <form action="" method="POST">
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="fa fa-user"></span></span>
-                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Nombre" aria-describedby="basic-addon1" name="nombre" required>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-user"></span></span>
+                        <input type="text" class="form-control" placeholder="Apellido" aria-describedby="basic-addon1" name="apellido" required>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-user"></span></span>
+                        <input type="number" class="form-control" placeholder="edad" aria-describedby="basic-addon1" name="edad" min="18"  required>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-envelope-o"></span></span>
+                        <input type="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1" name="email" required>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-phone"></span></span>
+                        <input type="phone" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1" name="telefono">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-map-o"></span></span>
+                        <input type="phone" class="form-control" placeholder="Localidad" aria-describedby="basic-addon1" name="localidad" >
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-map-o"></span></span>
+                          <select name="fechas" id="" required>
+                              <option value="">Seleciona Fecha</option>
+                              <option value="18-08">18 de Agosto</option>
+                              <option value="19-08">19 de Agosto</option>
+                              <option value="25-08">25 de Agosto</option>
+                              <option value="26-08">26 de Agosto</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="input-group send">
+                        <span class="input-group-addon" id="basic-addon1"><span class="fa fa-paper-plane"></span></span>
+                        <input type="submit" class="form-control" value="Completar Inscripción">
+                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -62,7 +107,51 @@ wp_reset_query();
 <?php
 get_footer('landing');
 ?>
+ <?php wp_footer(); 
+                  if (isset($_POST['email'])) {
+                //echo"<h1>Pasoo uno !</h1>";
+                        if (!empty($_POST['email']) && !empty($_POST['nombre'])) {
+                            require_once ABSPATH . WPINC . '/class-phpmailer.php';
+                            $mail = new PHPMailer();
 
+                            $mail->AddAddress('jose.vivas@proyectokamila.com');
+                            $mail->From = 'jose.vivas@proyectokamila.com';
+                            $mail->FromName = 'Solicitud de inscripcion CMV';
+                            $asunto = 'INSCRITO CMV';
+                            $contenido = '<div style="font-color: #000;">';
+                            $contenido .= '<h2>Solicitud de CMV.</h2>';
+                            $contenido .= '<p>Enviado el ' . date("d/m/Y") . '</p>';
+                            $contenido .= '<p>vengo de' . bloginfo('template_url') . '</p>';
+                            $contenido .= '<hr />';
+                            $contenido .= '<p><strong>Nombre: </strong>' . $_POST['nombre'] . ' ' . $_POST['apellido'] .'</p>';
+                            $contenido .= '<p><strong>Email: </strong>' . $_POST['email'] . '</p>';
+                            $contenido .= '<p><strong>Telefono: </strong>' . $_POST['phone'] . '</p>';
+                            $contenido .= '<p><strong>Edad: </strong>' . $_POST['edad'] . '</p>';
+                            $contenido .= '<p><strong>Localidad: </strong>' . $_POST['localidad'] . '</p>';
+                            $contenido .= '<p><strong>Fecha: </strong>' . $_POST['fecha'] . '</p>';
+                            $contenido .= '<hr />';
+                            $contenido .= '</div>';
+
+                            $mail->Subject = $asunto;
+                            $mail->Body = $contenido;
+                            $mail->IsHTML();
+
+                //      add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+                //      $mail = wp_mail($correo, $asunto, $contenido, $headers);
+
+                        if ($mail->send()) {
+                            echo $mensaje = '<script type="text/javascript">alert("Su mensaje ha sido enviado con éxito, Gracias por Contactarnos.");</script>';
+                            redirect(bloginfo('template_url'));
+                        } else {
+                            echo $mensaje = '<script type="text/javascript">alert("Error al Enviar.");</script>';
+                            redirect(bloginfo('template_url') . '/contacto');
+                        }
+                    } else {
+                        echo $mensaje = '<script type="text/javascript">alert("Faltan campos por llenar.");</script>';
+                        redirect(bloginfo('template_url') . '/contacto');
+                    }
+                    }
+        ?>
 <style>
     .anythingSlider-default .forward a {
         background-position: right -189px !important;
