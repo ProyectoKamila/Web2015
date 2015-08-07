@@ -68,7 +68,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="fa fa-phone"></span></span>
-                        <input type="phone" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1" name="telefono">
+                        <input type="phone" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1" name="phone">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
