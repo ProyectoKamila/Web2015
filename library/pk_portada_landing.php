@@ -6,7 +6,7 @@
                         query_posts(array('post_type'=>'portada-landing', 'posts_per_page'=>1, 'paged' => $pag,'categoria1'=>$pk_category));
                         while(have_posts()){the_post();
                         ?>
-<div class="container-fluid cover"  id="" data-type="parallax" data-speed="20" style="background: url('<?php echo get_field("imagen_de_fonfo");?>') top center; background-size:cover; background-repeat: no-repeat;" >
+<div class="container-fluid cover"  id="" data-type="parallax" data-speed="20" style="background: url('<?php echo get_field("imagen_de_fondo");?>') top center; background-size:cover; background-repeat: no-repeat;" >
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 portada" style="background: transparent !important;">
                     <div class="row" style=" max-width: 1000px;margin: 0 auto;">
