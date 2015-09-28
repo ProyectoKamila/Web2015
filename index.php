@@ -4,7 +4,7 @@
 wp_reset_query();
 ?>
         
-        <article id="servicios" data-type="parallax" data-speed="210">
+        <article id="servicios" data-type="" data-speed="">
         <div class="container">
             <div class="row">
                 <?php $s = query_posts(array('post_type' => 'servicios','posts_per_page'=>6 ));?>
@@ -32,7 +32,52 @@ wp_reset_query();
             </div>
         </div>
         </article>
-
+        <article class="kamila-messenger">
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="col-xs-12 text-center">
+                    <h1><strong>¿Por qué preferirnos? </strong></h1>
+                    <br/>
+            </div>
+            <section class="col-xs-3">
+                <div class="icono">
+                    <img src="<?php bloginfo("template_url");?>/images/compu/compu.svg" alt="Computadora svg" title="" />
+                </div>
+                <br/>
+                <div class="content-sms">
+                    <p>Cada día <strong>innovamos</strong> en nuestros <strong>productos y servicios</strong></p>
+                </div>
+            </section>
+            <section class="col-xs-3">
+                <div class="icono">
+                    <img src="<?php bloginfo("template_url");?>/images/cere/cere.svg" alt="Computadora svg" title="" />
+                </div>
+                <br/>
+                <div class="content-sms">
+                    <p>Somos <strong>nerd</strong>, encontramos la <strong>solución a tus problemas</strong></p>
+                </div>
+            </section>
+            <section class="col-xs-3">
+                <div class="icono">
+                    <img src="<?php bloginfo("template_url");?>/images/interactive/mug.svg" alt="Computadora svg" title="" />
+                </div>
+                <br/>
+                <div class="content-sms">
+                    <p>Tómatelo con calma recuerda;<strong> el método garantiza el éxito</strong></p>
+                </div>
+            </section>
+            <section class="col-xs-3">
+                <div class="icono">
+                    <img src="<?php bloginfo("template_url");?>/images/mundo/mundo.svg" alt="Computadora svg" title="" />
+                </div>
+                <br/>
+                <div class="content-sms">
+                    <p>Trabaja con nosotros <strong>la fórmula del éxito </strong>, juntos podemos cambiar <strong> el mundo</strong></p>
+                </div>
+            </section>
+                </div>
+            </div>            
+        </article>
         <?php $p= query_posts(array('post_type'=>'planes','posts_per_page'=>3));?>
         <?php if(!empty($p)){?>
         <article id="planes" data-type="parallax" data-speed="210">
@@ -77,7 +122,7 @@ wp_reset_query();
         </article>
         <?php } ?>
         <article id="portafolio">
-            <div class="fondo" data-type="parallax" data-speed="210">
+            <div class="fondo" data-type="" data-speed="">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">

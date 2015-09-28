@@ -1,5 +1,6 @@
 <?php
 //Cambior el logo de inicio de Sesion
+@ini_set( 'upload_max_size' , '64M' ); @ini_set( 'post_max_size', '64M'); @ini_set( 'max_execution_time', '300' ); 
 add_action('login_head', 'custom_login_logo');
 include('library/login-logo.php');
 //Funciones para crear post y Caetegory personalizados

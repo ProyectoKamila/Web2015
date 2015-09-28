@@ -81,10 +81,6 @@
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="fa fa-map-o"></span></span>
                           <select name="fecha" id="" required>
-                              <option value="">Seleciona Fecha</option>
-                              <option value="18-08">18 de Agosto</option>
-                              <option value="19-08">19 de Agosto</option>
-                              <option value="25-08">25 de Agosto</option>
                               <option value="26-08">26 de Agosto</option>
                           </select>
                     </div>

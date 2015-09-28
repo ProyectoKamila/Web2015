@@ -18,7 +18,7 @@ header.principal{
 	border-bottom: 4px solid @rojo;
 	position: fixed;
 	top: 0px;
-	z-index: 10;
+	z-index: 10000;
 	background: @rojo;
 	display: block;
 	.logo{
@@ -55,7 +55,7 @@ header.principal{
 	left: 70%;
 	top: 4px;
 	overflow: hidden;
-	z-index: 10;
+	z-index: 1000;
 	color: white;
 	text-align: center;
 	font-size: 0.7em;
@@ -74,6 +74,10 @@ header.principal{
 	background: @gris;
 	position: relative;;
 	overflow: hidden;
+	-webkit-transition:background-position 1.1s ease-in;  
+    -moz-transition:background-position 1.1s ease-in;  
+    -o-transition:background-position 1.1s ease-in;  
+    transition:background-position 1.1s ease-in; 
 	
 }
 .portada{
@@ -81,7 +85,8 @@ header.principal{
 	position: absolute;
 	background: url('../images/general/shape.png') no-repeat;
 	overflow: hidden;
-	background-attachment: fixed;
+	transition: .7s ease-in; 
+	
 	.logo{
 		margin-top: 1.5%;
 		img{
@@ -148,14 +153,15 @@ header.principal{
 }
 #nosotros{
 
-background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/img/intro-bg.jpg') no-repeat top center;
+	background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/img/intro-bg.jpg') no-repeat top center;
 	background-size: cover !important;
 	background-attachment: scroll !important;
 }
 #servicios{
 	z-index: 10;
-	background-attachment: fixed;
-
+	background:white;
+	position:relative;
+	
 	.middle-line{
 		height: 100px;
 		background: none;
@@ -207,8 +213,21 @@ background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/im
 	}
 }
 #planes{
-	margin-top: 40px;
+	
+	background: url("../images/fondo-planes.jpg") top center no-repeat;
 	background-attachment: fixed;
+	background-size:cover; 
+	    padding-top: 80px;
+	    padding-bottom: 80px;
+	    -webkit-transition:background-position 1.1s ease-in;  
+    -moz-transition:background-position 1.1s ease-in;  
+    -o-transition:background-position 1.1s ease-in;  
+    transition:background-position 1.1s ease-in; 
+	.subtitle{
+		p{
+		color:@azul-oscuro;
+		}
+	}
 	.plan{
 		margin-bottom: 30px;
 		transition: 1s all ease-in-out;
@@ -295,11 +314,11 @@ background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/im
 }
 #portafolio{
 	width: 100%;
-	margin-top: 40px;
+	
 	.fondo{
 		background: @fondo-planes;
 		width: 100%;
-		background-attachment: fixed;
+	
 		z-index: 3;
 	}
 	.title{
@@ -339,6 +358,10 @@ background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/im
 				cursor: pointer;
 				overflow: hidden;
 				transition: 1s all ease-in-out;
+				-webkit-transition:background-size 1.1s ease-in;  
+		    -moz-transition:background-size 1.1s ease-in;  
+		    -o-transition:background-size 1.1s ease-in;  
+		    transition:background-size 1.1s ease-in; 
 			}
 			.cover-image{
 				width: 100%; 
@@ -370,6 +393,8 @@ background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/im
 
 }
 .marketing-interno{
+	background:url("../images/pattner.png") #F7F7F7 repeat;
+	overflow:hidden;
 	h1{
 		text-align: center;
 	}
@@ -389,18 +414,21 @@ background: url('http://ironsummitmedia.github.io/startbootstrap-landing-page/im
 }
 .kamila-messenger{
 	width: 100%;
+	padding-top:50px;
 	background: @fondo-planes;
 	min-height: 140px;
 	position: relative;;
-	background-attachment: fixed;
+	overflow:hidden;
 	.icono{
 		display: block;
 		position: relative;
 		margin: 0 auto;
+		width:120px;
+		height:120px;
 	}
 	.content-sms{
 		border-radius: 10px;
-		background: #fefefe;
+		background: none;
 		min-height: 120px;
 		margin-bottom: 10px;
 		margin-top: 10px;
@@ -478,7 +506,7 @@ section.blog{
 	}
 }
 .contactanos{
-	margin-top: 20px;
+	
 	width: 100%;
 	background: #fff;
 	background-attachment: fixed;
@@ -920,9 +948,7 @@ footer{
 				}
 			}
 			.portada{
-				background-position-y: top;
-  				background-position-x: left;
-  				background-size: 170%;
+				background-size:cover;
 			}
 			
 		
@@ -954,7 +980,7 @@ footer{
 
 			margin-top: -15px;
   			padding: 0px;
-  			box-shadow: 0px 2px 9px 5px #f0f0f0;
+  			
 		section.caracteristicas {
 		  width: 100%;
 		  background: #f0f0f0;
@@ -1041,4 +1067,102 @@ html {
     display: block;
     margin: 0 auto;
     position: relative;
+}
+.boot-slide{
+	height:100%;
+	position:relative;
+	.carousel-inner , .carousel-inner > .item{
+		height:100%;
+		position:relative;
+	}
+}
+.carousel-control{
+	width: 5%;
+	.glyphicon-chevron-left{
+		left:50% !important;
+	}
+		.glyphicon-chevron-right{
+			right:50% !important;	
+		}
+}
+.carousel-control.right{
+	
+}
+.carousel-control.left{
+	
+}
+.boot-slide {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner{
+ 		&:before {
+		width:100%;
+		height:100px;
+		background:red;
+		position:fixed;
+		z-index:999999;
+	}
+	.portada{
+		transform:translate3D(100px,20px,900px);
+		// transition:1.7s all ease-in-out;
+	}
+}
+.active{
+	
+	.cover{
+		.portada{
+	    transform: translate3D(0px, 0px, 0px) !important;
+		}
+		}
+	}
+
+/* ScrollBar NochesDeCode.com.ar */ 
+
+::-webkit-scrollbar { 
+    width: 6px; 
+} 
+      
+::-webkit-scrollbar-track { 
+    -webkit-box-shadow: #ffF; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+
+::-webkit-scrollbar-track-piece { 
+    background-color: @gris; 
+} 
+      
+::-webkit-scrollbar-thumb { 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+    background: @rojo; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  
+} 
+
+::-webkit-scrollbar-thumb:window-inactive { 
+    background: @rojo; 
+} 
+
+.loader{
+	width:100%;
+	height:100%;
+	background:@rojo;
+	z-index:100000;
+	position:fixed;
+	overflow:hidden;
+		.circle{
+			width:100px;
+			height:100px;
+			background:white;
+			margin:0 auto;
+			margin-top:250px;
+			border-radius:50%;
+			overflow:hidden;
+				img{
+					width:100%;
+					height:100%;
+				}
+		}
 }

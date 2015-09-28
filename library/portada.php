@@ -2,11 +2,32 @@
     
     if($pk_category != null){
     ?>
-                        <?php
-                        query_posts(array('post_type'=>'portada', 'posts_per_page'=>1, 'paged' => $paged,'categoria'=>$pk_category));
+    <?php $sliders = query_posts(array('post_type'=>'portada', 'posts_per_page'=>2, 'paged' => $paged,'categoria'=>$pk_category));
+    
+                        $x=0;
+                        $it = sizeof($sliders);
+                        //echo $it;
+    ?>
+    <div id="myCarousel" class="carousel slide boot-slide" data-ride="carousel" data-interval="10000" style="background:#B5B3B2;">
+    
+  <!-- Indicators -->
+          <ol class="carousel-indicators">
+  <?php if($it > 0){?>
+          <?php for($x=1; $x<=$it; $x++) {?>
+            <li data-target="#myCarousel" data-slide-to="<?php echo $x;?>" <?php if($x==1) { ?> class="active" <?php } else { ?> class="li-item" <?php } ?> > </li>
+         <?php } ?>    
+      <?php } ?>
+      </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+        <?php
+                       $x=0; 
                         while(have_posts()){the_post();
+                        
                         ?>
-<div class="container-fluid cover"  id="" data-type="parallax" data-speed="20" style="background: url('<?php echo get_field("imagen_de_fondo");?>') top center; background-size:cover; background-repeat: no-repeat;" >
+    <div class="item banner <?php if($x==0){ ?> active <?php $x++; }?> ">
+                         
+    <div class="container-fluid cover"  id="" data-type="parallax" data-speed="20" style="background: url('<?php echo get_field("imagen_de_fondo");?>') top center; background-size:cover; background-repeat: no-repeat;" >
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 portada" >
                     <div class="row">
@@ -24,7 +45,7 @@
                         </div>
                         <div class="clearfix"></div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 titulo">
-<div style="display:none"><?php the_title(); ?></div>
+                            <div style="display:none"><?php the_title(); ?></div>
                             <h1><?= get_field("titulo_primera")?> <strong><?= get_field("titulo_segunda")?></strong></h1>
                             <h2 class="hidden-xs"><strong><?= get_field("sustitulo")?></strong> <?= get_field("sustitulo2")?></h2>
                         </div>
@@ -32,19 +53,34 @@
                         <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 contenido">
                             <?php the_content(); ?>
                             <a href="<?php if(get_field("enlaceb") != null){echo get_field("enlaceb");} ?>" class="btn btn-default"> <?php echo get_field("nombreb");?></a>
-                           <nav>
-                                <ul class="pager">
-                                    <li><?php previous_posts_link('<') ?></li>
-                                    <li><?php next_posts_link('>') ?></li>
-                                </ul>
-                            </nav> 
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+      </div>
     <?php
 }
 }
+?>
+  
+
+  
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+   
+<?php
 }
 ?>

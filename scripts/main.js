@@ -35,18 +35,44 @@ $(document).ready(function() {
     }
 });
 
-$('div[data-type="parallax"]').each(function(){
-    
-        var $portadactual = $(this);
-        $(window).scroll(function(){
-            $window = $(window);
-            var yPos = $($window.scrollTop() / $portadactual.data('speed'));
-            
-            var coord = ' -100% ' + yPos + "px";
-                        console.log(coord);
-            $portadactual.css('background-position',coord);
-        });
-    });
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    console.log(scroll);
+    //$(".portada").css("background-position-y",scroll +"px");
+    if(scroll <100){
+        var efecto = $(".cover").css("background-position-y",'0px');
+        $("article#servicios").animate({
+            "top":"-0px",
+            "padding-top":"0px"
+        },0);   
+        
+    }
+    if(scroll > 200 && scroll < 400){
+        var efecto = $(".cover").css("background-position-y",'100px');
+        $("article#servicios").animate({
+            "top":"-150px",
+            "padding-top":"0px"
+        },0);   
+    }
+    if(scroll > 400 && scroll < 600){
+        var efecto = $(".cover").css("background-position-x",'-200px');
+        $("article#servicios").animate({
+            "top":"-220px",
+            "padding-top":"150px"
+        },0);   
+    }
+    if(scroll > 1700){
+       $("#planes").css("background-position-y",'-200px');
+    }else{
+       $("#planes").css("background-position-y",'0px');
+    }
+});
+$(".marketing-interno").scroll(function (event) {
+  console.log("mark");
+  var mscroll = $(".marketing-interno").scrollTop();
+  console.log(mscroll);
+});
 });
 
 
@@ -141,3 +167,15 @@ $('div[data-type="parallax"]').each(function(){
         
         google.maps.event.addDomListener(window, 'load', initialize);
     
+  $(window).load(function() {
+    $(".loader").css("background","white");
+    $('.loader > .circle').animate({
+      "width":"100%",
+      "height": "100%",
+      "margin-top": "0%",
+      "top":"0px"
+    },500);
+    $(".loader").fadeOut("slow");
+    
+    
+})

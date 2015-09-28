@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
           <meta charset="<?php bloginfo( 'charset' ); ?>">
+          <link rel="icon" href="http://www.proyectokamila.com/favicon.png" type="image/png-icon">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='<?php bloginfo('stylesheet_url'); ?>' rel='stylesheet' type='text/css'> 
@@ -39,6 +40,24 @@ _atrk_opts = { atrk_acct:"m0sii1aUCm00ih", domain:"proyectokamila.com",dynamic: 
 </script>
 <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=m0sii1aUCm00ih" style="display:none" height="1" width="1" alt="first" /></noscript>
 <!-- End Alexa Certify Javascript -->
+<div class="loader text-center">
+    <div class="circle">
+        <?php $numb = rand(1,4);?>
+        <?php if($numb == 1){?>
+        <img src="<?php bloginfo("template_url");?>/images/cere/cere.svg"></img>
+        <?php } ?>
+        <?php if($numb == 2){?>
+        <img src="<?php bloginfo("template_url");?>/images/compu/compu.svg"></img>
+        <?php } ?>
+        <?php if($numb == 3){?>
+        <img src="<?php bloginfo("template_url");?>/images/mundo/mundo.svg"></img>
+        <?php } ?>
+        <?php if($numb == 4){?>
+        <img src="<?php bloginfo("template_url");?>/images/interactive/mug.svg"></img>
+        <?php } ?>
+    </div>
+    <p style="color:white; font-size:16px;">Cargando</p>
+</div>
    <header id="header-principal" class="principal" data-status="close">
             <div class="container">
                 <div class="row">
@@ -60,6 +79,6 @@ _atrk_opts = { atrk_acct:"m0sii1aUCm00ih", domain:"proyectokamila.com",dynamic: 
             </div>
         </header>
         <div id="switch-head" class="tab">
-            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            <span class="fa fa-bars" aria-hidden="true"></span>
         </div>
         
