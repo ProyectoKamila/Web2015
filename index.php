@@ -39,7 +39,7 @@ wp_reset_query();
                     <h1><strong>¿Por qué preferirnos? </strong></h1>
                     <br/>
             </div>
-            <section class="col-xs-3">
+            <section class="col-xs-12 col-md-3">
                 <div class="icono">
                     <img src="<?php bloginfo("template_url");?>/images/compu/compu.svg" alt="Computadora svg" title="" />
                 </div>
@@ -48,7 +48,7 @@ wp_reset_query();
                     <p>Cada día <strong>innovamos</strong> en nuestros <strong>productos y servicios</strong></p>
                 </div>
             </section>
-            <section class="col-xs-3">
+            <section class="col-xs-12 col-md-3">
                 <div class="icono">
                     <img src="<?php bloginfo("template_url");?>/images/cere/cere.svg" alt="Computadora svg" title="" />
                 </div>
@@ -57,7 +57,7 @@ wp_reset_query();
                     <p>Somos <strong>nerd</strong>, encontramos la <strong>solución a tus problemas</strong></p>
                 </div>
             </section>
-            <section class="col-xs-3">
+            <section class="col-xs-12 col-md-3">
                 <div class="icono">
                     <img src="<?php bloginfo("template_url");?>/images/interactive/mug.svg" alt="Computadora svg" title="" />
                 </div>
@@ -66,7 +66,7 @@ wp_reset_query();
                     <p>Tómatelo con calma recuerda;<strong> el método garantiza el éxito</strong></p>
                 </div>
             </section>
-            <section class="col-xs-3">
+            <section class="col-xs-12 col-md-3">
                 <div class="icono">
                     <img src="<?php bloginfo("template_url");?>/images/mundo/mundo.svg" alt="Computadora svg" title="" />
                 </div>
