@@ -70,11 +70,11 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 menu-footer">
                                  <ul class="nav nav-pills">
-                                     <li role="presentation" ><a href="#">Conócenos</a></li>
-                                     <li role="presentation"><a href="#">Productos y Servicios</a></li>
-                                     <li role="presentation"><a href="#">Portafolio</a></li>
-                                     <li role="presentation"><a href="#">Blog</a></li>
-                                     <li role="presentation"><a href="#">Contacto</a></li>
+                                        <li role="presentation" ><a href="<?php echo home_url('conocenos');?>">Conócenos</a></li>
+                                         <li role="presentation"><a href="<?php echo home_url('servicios');?>">Productos y Servicios</a></li>
+                                         <li role="presentation"><a href="<?php echo home_url('portafolio');?>">Portafolio</a></li>
+                                         <li role="presentation"><a href="<?php echo home_url('blog');?>">Blog</a></li>
+                                         <li role="presentation"><a href="<?php echo home_url('contacto');?>">Contacto</a></li>
                                 </ul>  
                             </div>
                             

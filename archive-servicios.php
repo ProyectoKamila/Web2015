@@ -45,7 +45,7 @@ wp_reset_query();
         <div class="image-bar fondo-left" style="background: url('<?php bloginfo('template_url');?>/images/bar.jpg') top center;">
     <div class="cover" ></div>
 </div>
-<?php $p = query_posts(array('post_type'=>'planes','posts_per_page'=>3));?>
+<?php $p = query_posts(array('post_type'=>'planes','posts_per_page'=>5));?>
 <?php if(!empty($p)){?>
     <article id="planes" data-type="parallax" data-speed="210">
             <div class="container-fluid">

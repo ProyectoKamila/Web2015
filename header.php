@@ -56,7 +56,7 @@ _atrk_opts = { atrk_acct:"m0sii1aUCm00ih", domain:"proyectokamila.com",dynamic: 
         <img src="<?php bloginfo("template_url");?>/images/interactive/mug.svg"></img>
         <?php } ?>
     </div>
-    <p style="color:white; font-size:16px;">Cargando</p>
+    <p style="color:white; font-size:16;">Cargando</p>
 </div>
    <header id="header-principal" class="principal" data-status="close">
             <div class="container">
@@ -72,12 +72,17 @@ _atrk_opts = { atrk_acct:"m0sii1aUCm00ih", domain:"proyectokamila.com",dynamic: 
                              <li role="presentation"><a href="<?php echo home_url('servicios');?>">Productos y Servicios</a></li>
                              <li role="presentation"><a href="<?php echo home_url('portafolio');?>">Portafolio</a></li>
                              <li role="presentation"><a href="<?php echo home_url('blog');?>">Blog</a></li>
-                             <li role="presentation"><a href="<?php echo home_url('blog');?>">Contacto</a></li>
+                             <li role="presentation"><a href="<?php echo home_url('contacto');?>">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
+        <!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'K9W2CG4jBf';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/geo-widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
         <div id="switch-head" class="tab">
             <span class="fa fa-bars" aria-hidden="true"></span>
         </div>

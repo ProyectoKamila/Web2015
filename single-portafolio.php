@@ -25,18 +25,27 @@
 <div class="addthis_native_toolbox"></div>
                 </div>
                 <div class="clearfix"></div>
+                <?php if(get_field('imagen_1')){?>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                        <img src="<?php echo get_field('imagen_1');?>" alt="<?php the_title();?>" class="img-responsive">
                 </div>
+                <?php } ?>
+                <?php if(get_field('imagen_2')){?>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <img src="<?php echo get_field('imagen_2');?>" alt="<?php the_title();?>" class="img-responsive">
                 </div>
+                <?php } ?>
+                <?php if(get_field('imagen_3')){?>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <img src="<?php echo get_field('imagen_3');?>" alt="<?php the_title();?>" class="img-responsive">
                 </div>
+                <?php } ?>
+                <?php if(get_field('imagen_4')){?>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <img src="<?php echo get_field('imagen_4');?>" alt="<?php the_title();?>" class="img-responsive">
                 </div>
+                <?php } ?>
+                
             </div>
         </div>
 </section>
