@@ -50,7 +50,8 @@
                                             echo "<strong>" . $terms_slug_str . "</strong>";
                                         ?>
                                     </p>
-                                    <a href="" class="btn btn-default">Ver más</a>
+                                    <br/>
+                                    <a href="<?php the_permalink();?>" class="btn btn-default">Ver más</a>
                             </div>
                             <div class="info-folio">
                                 <div class="title">
@@ -72,13 +73,24 @@
                                             echo "<strong>" . $terms_slug_str . "</strong>";
                                         ?>
                                         </p>
-                                        <a href="" class="btn btn-default">Ver más</a>
+                                        <br/>
+                                        <a href="<?php the_permalink();?>" class="btn btn-default">Ver más</a>
                             </div>
                         </div>
                         </a>
                         </div>
                     </div>
                 <?php } ?>
+                   <div class="col-xs-12">
+                    <nav>
+                      <ul class="pager">
+                        <li class="previous "><?php previous_posts_link( 'Nuevos' ); ?></li>
+                        <li class="next "><?php next_posts_link( 'Antiguos' ); ?></li>
+
+                      </ul>
+                    </nav>
+                      
+                </div>
                 </div>
                 </div>
             </div>

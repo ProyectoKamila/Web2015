@@ -51,6 +51,7 @@
                                             echo "<strong>" . $terms_slug_str . "</strong>";
                                         ?>
                                     </p>
+                                    </br>
                                     <a href="<?php the_permalink();?>" class="btn btn-default">Ver más</a>
                             </div>
                             <div class="info-folio">
