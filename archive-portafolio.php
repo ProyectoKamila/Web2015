@@ -51,7 +51,7 @@
                                             echo "<strong>" . $terms_slug_str . "</strong>";
                                         ?>
                                     </p>
-                                    <a href="" class="btn btn-default">Ver más</a>
+                                    <a href="<?php the_permalink();?>" class="btn btn-default">Ver más</a>
                             </div>
                             <div class="info-folio">
                                 <div class="title">
@@ -73,7 +73,7 @@
                                             echo "<strong>" . $terms_slug_str . "</strong>";
                                         ?>
                                         </p>
-                                        <a href="" class="btn btn-default">Ver más</a>
+                                        <a href="<?php the_permalink();?>" class="btn btn-default">Ver más</a>
                             </div>
                         </div>
                         </a>
