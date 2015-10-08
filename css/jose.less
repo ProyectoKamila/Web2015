@@ -381,9 +381,7 @@ header.principal{
 
 		}
 		.folio{
-			.image{
-				background-size: 100% !important;
-			}
+			
 			.cover-image{
 			background: rgba(80,80,80,0.0);
 			}
@@ -1165,4 +1163,134 @@ html {
 					height:100%;
 				}
 		}
+}
+.portafolio-item{
+	.item{
+			padding-left: 16px !important;
+		padding-right: 16px !important;
+		}
+	.portafolio{
+		height:280px;
+		overflow:hidden;
+		margin-top:10px;
+		margin-bottom:20px;
+		
+		.folio{
+			height:100% !important;
+		}
+		.image2{
+			height:280px;
+			overflow:hidden;
+			img{
+				filter: url('#grayscale'); /* Versión SVG para IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 */
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				-ms-filter: grayscale(100%);
+				-o-filter: grayscale(100%);
+				filter: grayscale(100%); /* Para cuando es estándar funcione en todos */
+				filter: Gray(); /* IE4-8 and 9 */
+				
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-ms-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				vertical-align: middle;
+				display:inline-block;
+				
+			}
+		}
+		.image2:hover{
+			img{
+				-webkit-filter: grayscale(0%);
+					-moz-filter: grayscale(0%);
+					-ms-filter: grayscale(0%);
+					-o-filter: grayscale(0%);
+					filter: none;
+					
+					-webkit-transition: all 0.5s ease;
+					-moz-transition: all 0.5s ease;
+					-ms-transition: all 0.5s ease;
+					-o-transition: all 0.5s ease;
+					transition: all 0.5s ease;
+			}
+		}
+		.cover-image2{
+			background:rgba(0,0,0,0.8);
+			position:relative;
+			transition:1s all ease-in-out;
+			margin-top:-280px;
+			height:280px;
+		}
+		.info-folio{
+			width:100%;
+			margin-top:200px;
+			height:280px;
+			background:@rojo;
+			position:relative;
+			z-index:3;
+			
+		}
+	}
+	.cover-image2 , .info-folio{
+		.title{
+			padding-top:30px;
+			h4{
+				color:white;
+				text-align:center;
+				font-weight:bold;
+				letter-spacing:1px;
+				font-size:20;
+				text-transform:uppercase;
+			}
+		}
+		hr {
+			    margin-top: 20px;
+			    margin-bottom: 20px;
+			    border: 0;
+			    border-top: 5px solid #eee;
+			    width: 80px;
+			}
+			p{
+				color:white;
+				strong{
+					color:white;	
+				}
+			}
+			.btn{
+				background:none !important;
+				border:1px solid white;
+			}
+	}
+	.portafolio:hover{
+		
+		.cover-image2{
+			margin-top:-760px;
+		}
+		.image2{
+			img{
+				-webkit-filter: grayscale(0%);
+					-moz-filter: grayscale(0%);
+					-ms-filter: grayscale(0%);
+					-o-filter: grayscale(0%);
+					filter: none;
+					
+					-webkit-transition: all 0.5s ease;
+					-moz-transition: all 0.5s ease;
+					-ms-transition: all 0.5s ease;
+					-o-transition: all 0.5s ease;
+					transition: all 0.5s ease;
+			}
+		}
+	}
+}
+a{
+	text-decoration:none !important;
+}
+.previous , .next {
+	a{
+		border-radius:0px !important;
+		background:@rojo !important;
+		color:white;
+	}
 }
