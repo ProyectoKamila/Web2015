@@ -4,7 +4,7 @@
 <?php pk_portada($post->post_name);
 wp_reset_query();
  ?>
-   <article id="servicios" data-type="parallax" data-speed="210">
+   
         <div class="container">
             <div class="row">
              
@@ -106,7 +106,7 @@ wp_reset_query();
                 </div>
             </div>
         </div>
-        </article>
+        
 <section class="archive-servicios single-servicios">
     <div class="container">
         <div class="row">
